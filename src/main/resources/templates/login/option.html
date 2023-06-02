@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+body {
+	font-family: "Lato", Helvetica, Arial;
+	font-size: 16px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    background:url('https://tourbana.vn/uploads/images/images/thoi-gian-cau-rong-phun-lua-da-nang.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+    
+}
+.container {
+    /* border: 2px solid black; */
+    border-radius: 10px;
+  width: 350px;
+  
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  animation: keolentren none 4s none none none ease-in-out;
+}
+@keyframes keolentren {
+    0%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.container > ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+
+/* Classes */
+
+.title {
+	font-family: 'Pacifico', sans-serif;
+	font-weight: normal;
+	font-size: 40px;
+	text-align: center;
+	line-height: 1.4;
+	color: #2980B9;
+    padding: 20px;
+}
+
+.dropdown a {
+	text-decoration: none;
+}
+
+.dropdown [data-toggle="dropdown"] {
+	position: relative;
+	display: block;
+	color: white;
+	background: #2980B9;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	padding: 10px;
+    margin: 24px;
+    border-radius: 10px;
+}
+
+.dropdown [data-toggle="dropdown"]:hover {
+	background: #f3ee9a;
+    opacity: 1.2;
+    color: black;
+}
+
+.dropdown .icon-arrow {
+	position: absolute;
+	display: block;
+	font-size: 0.7em;
+	color: #fff;
+	top: 14px;
+	right: 10px;
+}
+
+.dropdown .icon-arrow.open {
+	transform: rotate(-180deg);
+	transition: transform 0.6s;
+}
+
+.dropdown .icon-arrow.close {
+	transform: rotate(0deg);
+	transition: transform 0.6s;
+}
+
+.dropdown .icon-arrow:before {
+	content: '\25BC';
+}
+
+.dropdown .dropdown-menu {
+	max-height: 0;
+	overflow: hidden;
+	list-style: none;
+}
+
+.dropdown .dropdown-menu li {
+	padding: 0;
+}
+
+.dropdown .dropdown-menu li a {
+	display: block;
+	color: #888;
+	background: #EEE;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	padding: 10px 10px;
+}
+
+.dropdown .dropdown-menu li a:hover {
+	background: #F5F5F5;
+}
+
+.dropdown .show,
+.dropdown .hide {
+	transform-origin: 50% 0%;
+}
+
+.dropdown .show {
+	display: block;
+	max-height: 9999px;
+	transform: scaleY(1);
+	animation: showAnimation 0.5s ease-in-out;
+	transition: max-height 1s ease-in-out;
+}
+
+.dropdown .hide {
+	max-height: 0;
+	transform: scaleY(0);
+	animation: hideAnimation 0.4s ease-out;
+	transition: max-height 0.6s ease-out;
+}
+
+@keyframes showAnimation {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.04);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.04);
+	}
+	100% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.02);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes hideAnimation {
+	0% {
+		transform: scaleY(1);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.02);
+	}
+	100% {
+		transform: scaleY(0);
+	}
+}
+
+</style>
+
+<body>
+    
+        <div class="main">
+        
+        <div class="container">
+            <h1 class="title">Đăng Nhập Với Tư Cách Là</h1>
+            <ul>
+              <li class="dropdown">
+                
+                <center><a href="/login-student-vn" data-toggle="dropdown">Học Sinh</a></center>
+                <center><hr  width="30%" size="5px" align="center" color="black" /></center>
+              </li>
+              <li class="dropdown">
+                <center><a href="/login-university-vn" data-toggle="dropdown">Trường Đại Học</a></center>
+                <center><hr  width="30%" size="5px" align="center" color="black" /></center>
+              </li>
+              <li class="dropdown">
+                <center><a href="/login-admin-vn" data-toggle="dropdown">Admin</a></center>
+                
+              </li>
+            </ul>
+          </div>
+    </div>
+    </div>
+    
+   
+</body>
+</html>
